@@ -3,9 +3,22 @@ import React from "react";
 function getPasswordStrength(password) {
     if (password.length === 0) return { label: "", color: "transparent", percent: 0 };
     if (password.length < 6) return { label: "Poco segura", color: "red", percent: 20 };
-    if (password.match(/[A-Z]/) && password.match(/[0-9]/) && password.length >= 8) {
+
+    const hasUpper = /[A-Z]/.test(password);
+    const hasLower = /[a-z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    const hasSymbol = /[^A-Za-z0-9]/.test(password);
+
+    if (
+        password.length >= 10 && 
+        hasUpper && 
+        hasLower && 
+        hasNumber && 
+        hasSymbol
+    ) {
         return { label: "Muy segura", color: "green", percent: 100 };
     }
+
     return { label: "Segura", color: "orange", percent: 60 };
 }
 
