@@ -10,6 +10,7 @@ function getPasswordStrength(password) {
     const hasSymbol = /[^A-Za-z0-9]/.test(password);
 
     if (password.length >= 10 && hasUpper && hasLower && hasNumber && hasSymbol) {
+        // Requiere mínimo 10 caracteres, una mayúscula, una minúscula, un número y un símbolo
         return { label: "Muy segura", color: "green", percent: 100 };
     }
 
