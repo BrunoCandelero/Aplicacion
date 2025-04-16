@@ -17,7 +17,7 @@ Esta es una pequeña aplicación web que permite al usuario ingresar una contras
 
 ## 🚀 Probala acá
 
-👉 [https://brunocandelero.github.io/Aplicacion](https://brunocandelero.github.io/Aplicacion)
+👉 https://brunocandelero.github.io/Aplicacion
 
 ## 🧠 ¿Cómo se calcula la fortaleza?
 

@@ -9,7 +9,6 @@ function getPasswordStrength(password) {
     const hasNumber = /[0-9]/.test(password);
     const hasSymbol = /[^A-Za-z0-9]/.test(password);
 
-    // "Muy segura" solo si cumple todos los requisitos
     if (password.length >= 10 && hasUpper && hasLower && hasNumber && hasSymbol) {
         return { label: "Muy segura", color: "green", percent: 100 };
     }

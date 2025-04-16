@@ -4,11 +4,10 @@ function PasswordInput({ password, setPassword }) {
     const [showPassword, setShowPassword] = useState(false);
     const [copied, setCopied] = useState(false);
 
-    // Función para copiar la contraseña al portapapeles
     const copyToClipboard = () => {
         navigator.clipboard.writeText(password).then(() => {
             setCopied(true);
-            setTimeout(() => setCopied(false), 3000); // Mensaje desaparece en 3s
+            setTimeout(() => setCopied(false), 3000); 
         });
     };
 
